@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المخازن</title>
+    <link rel="stylesheet" href="wms.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="l.png" alt="EL MAHDI EL MAACH" class="logo">
+        <img src="M.jpeg" alt="صورتك" class="photo">
+    </div>
+
+    <div class="container">
+        <h1><i class="fas fa-warehouse"></i> نظام إدارة المخازن</h1>
+        
+        <!-- نموذج إضافة السلع -->
+        <h2><i class="fas fa-plus-circle"></i> إضافة سلعة جديدة</h2>
+        <form id="productForm">
+            <input type="text" id="productName" placeholder="اسم السلعة" required>
+            <input type="number" id="productQuantity" placeholder="الكمية" required>
+            <input type="text" id="productLocation" placeholder="الموقع في المخزن" required>
+            <button type="submit"><i class="fas fa-save"></i> إضافة</button>
+        </form>
+
+        <!-- البحث عن السلع -->
+        <h2><i class="fas fa-search"></i> بحث عن سلعة</h2>
+        <input type="text" id="searchBox" placeholder="أدخل اسم السلعة للبحث">
+
+        <!-- زر تصدير البيانات -->
+        <button id="exportBtn"><i class="fas fa-file-excel"></i> تصدير إلى Excel</button>
+
+        <!-- جدول المخزون -->
+        <h2><i class="fas fa-boxes"></i> المخزون الحالي</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>اسم السلعة</th>
+                    <th>الكمية</th>
+                    <th>الموقع</th>
+                    <th>إجراء</th>
+                </tr>
+            </thead>
+            <tbody id="inventoryTable">
+                <!-- ستتم تعبئة الجدول ديناميكيًا -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="wms.js"></script>
+</body>
+</html>
